@@ -145,7 +145,7 @@
   }
   
   .page-section p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .flex-container {
@@ -221,17 +221,82 @@
   
   /* portfolio project images */
   /* TODO: Add portfolio project images here*/
-  
+  .flex-item{
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .flex-img {
+    display: none;
+  }
+
+  #horiseon-img {
+    background-image: url("https://user-images.githubusercontent.com/16748389/85058961-de2a7780-b170-11ea-9607-506f1524d142.jpeg");
+  }
+
+  #chalkboard-img {
+    background-image: url("https://media.istockphoto.com/id/589091614/photo/old-school-chalkboard.jpg?s=612x612&w=0&k=20&c=9xez5o5dkHDoH35YC1p5Iq-IuOgpvtwJcQgz_Pq1wOQ=")
+  }
+
+  #castle-img {
+    background-image: url("https://i.ytimg.com/vi/rRpICZlsJx8/hqdefault.jpg");
+  }
+
+  #tbd-img {
+    background-image: url("https://repository-images.githubusercontent.com/515473984/f7999b5f-0bdc-4d89-98b6-5a9dc463a7b4");
+  }
 
 
   /* media queries */
   
   /* TODO: add media query for a max-width of 980px */
   @media screen and (max-width: 980px) {
+    .flex-item:first-child {
+      min-height: 250px;
+    }
 
+    .hero-banner {
+      justify-content: center;
+      text-align: center;
+    }
   }
   
   /* TODO: add media query for a max-width of 768px */
   @media screen and (max-width: 768px) {
+    .flex-item {
+      flex-basis: 100%;
+    }
+
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+
+    .hero-banner{
+      justify-content: center;
+      text-align: center;
+    }
+
+    header, nav, .contact address {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    header h1 {
+      width: 110%;
+      align-items: center;
+    }
+
+    .page-section {
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .page-section > h2 {
+      text-align: left;
+      border-right: 0;
+      border-bottom: 4px solid var(--primary);
+      margin-left: 15px;
+    }
 
   }
